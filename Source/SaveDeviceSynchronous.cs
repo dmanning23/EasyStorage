@@ -25,7 +25,7 @@ namespace EasyStorage
 		private void VerifyIsReady()
 		{
 			if (!IsReady)
-				throw new InvalidOperationException(Strings.StorageDevice_is_not_valid);
+				throw new InvalidOperationException("StorageDevice is not valid");
 		}
 
 		/// <summary>

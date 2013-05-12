@@ -85,32 +85,15 @@
     <Compile Include="..\Source\SharedSaveDevice.cs">
       <Link>SharedSaveDevice.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Strings.Designer.cs">
-      <Link>Strings.Designer.cs</Link>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <None Include="..\Source\Strings.de.resx">
-      <Link>Strings.de.resx</Link>
-    </None>
-    <None Include="..\Source\Strings.es.resx">
-      <Link>Strings.es.resx</Link>
-    </None>
-    <None Include="..\Source\Strings.fr.resx">
-      <Link>Strings.fr.resx</Link>
-    </None>
-    <None Include="..\Source\Strings.it.resx">
-      <Link>Strings.it.resx</Link>
-    </None>
-    <None Include="..\Source\Strings.ja.resx">
-      <Link>Strings.ja.resx</Link>
-    </None>
-    <None Include="..\Source\Strings.resx">
-      <Link>Strings.resx</Link>
-    </None>
+    <Content Include="..\Source\Content\TestFont.xnb">
+      <Link>Content\TestFont.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>

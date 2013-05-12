@@ -101,8 +101,6 @@ namespace EasyStorage
 			// if we're running a non-supported language, default to the first given language
 			if (!supportedLanguage)
 			{
-				Strings.Culture = new CultureInfo(cultureMap[supportedLanguages[0]]);
-
 				// since the Strings.Culture changed, we need to reset the strings to make sure
 				// they are compliant with the desired supported languages
 				ResetSaveDeviceStrings();
@@ -116,15 +114,15 @@ namespace EasyStorage
 		public static void ResetSaveDeviceStrings()
 		{
 #if !WINDOWS_PHONE
-			SaveDevice.OkOption = Strings.Ok;
-			SaveDevice.YesOption = Strings.Yes_Select_new_device;
-			SaveDevice.NoOption = Strings.No_Continue_without_device;
-			SaveDevice.DeviceOptionalTitle = Strings.Reselect_Storage_Device;
-			SaveDevice.DeviceRequiredTitle = Strings.Storage_Device_Required;
-			SaveDevice.ForceDisconnectedReselectionMessage = Strings.forceDisconnectedReselectionMessage;
-			SaveDevice.PromptForDisconnectedMessage = Strings.promptForDisconnectedMessage;
-			SaveDevice.ForceCancelledReselectionMessage = Strings.forceCanceledReselectionMessage;
-			SaveDevice.PromptForCancelledMessage = Strings.promptForCancelledMessage;
+			SaveDevice.OkOption = "Ok";
+			SaveDevice.YesOption = "Yes. Select new device.";
+			SaveDevice.NoOption = "No. Continue without device.";
+			SaveDevice.DeviceOptionalTitle = "Reselect Storage Device";
+			SaveDevice.DeviceRequiredTitle = "Storage Device Required";
+			SaveDevice.ForceDisconnectedReselectionMessage = "The storage device was disconnected. A storage device is required to continue.";
+			SaveDevice.PromptForDisconnectedMessage = "The storage device was disconnected. You can continue without a device, but you will not be able to save. Would you like to select a storage device?";
+			SaveDevice.ForceCancelledReselectionMessage = "forceCanceledReselectionMessage";
+			SaveDevice.PromptForCancelledMessage = "No storage device was selected. You can continue without a device, but you will not be able to save. Would you like to select a storage device?";
 #endif
 		}
 	}
