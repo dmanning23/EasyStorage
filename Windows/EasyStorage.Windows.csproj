@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9272052E-A304-4DBB-B4BD-35B0453ED522}</ProjectGuid>
+    <ProjectTypeGuids>{9B831FEF-F496-498F-9FE8-180DA5CB4258};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EasyStorage.Windows</RootNamespace>
+    <MonoGamePlatform>WindowsGL</MonoGamePlatform>
+    <AssemblyName>EasyStorage.Windows</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="MonoGame.Framework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\Source\EasyStorageSettings.cs">
+      <Link>EasyStorageSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\FileAction.cs">
+      <Link>FileAction.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\IAsyncSaveDevice.cs">
+      <Link>IAsyncSaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\ISaveDevice.cs">
+      <Link>ISaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\IsolatedStorageSaveDevice.cs">
+      <Link>IsolatedStorageSaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\PlayerSaveDevice.cs">
+      <Link>PlayerSaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevice.cs">
+      <Link>SaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDeviceAsync.cs">
+      <Link>SaveDeviceAsync.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDeviceEventArgs.cs">
+      <Link>SaveDeviceEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevicePromptEventArgs.cs">
+      <Link>SaveDevicePromptEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevicePromptEventResponse.cs">
+      <Link>SaveDevicePromptEventResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevicePromptState.cs">
+      <Link>SaveDevicePromptState.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDeviceSynchronous.cs">
+      <Link>SaveDeviceSynchronous.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveOperationAsyncResult.cs">
+      <Link>SaveOperationAsyncResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SharedSaveDevice.cs">
+      <Link>SharedSaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Strings.Designer.cs">
+      <Link>Strings.Designer.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="..\Source\Strings.de.resx">
+      <Link>Strings.de.resx</Link>
+    </None>
+    <None Include="..\Source\Strings.es.resx">
+      <Link>Strings.es.resx</Link>
+    </None>
+    <None Include="..\Source\Strings.fr.resx">
+      <Link>Strings.fr.resx</Link>
+    </None>
+    <None Include="..\Source\Strings.it.resx">
+      <Link>Strings.it.resx</Link>
+    </None>
+    <None Include="..\Source\Strings.ja.resx">
+      <Link>Strings.ja.resx</Link>
+    </None>
+    <None Include="..\Source\Strings.resx">
+      <Link>Strings.resx</Link>
+    </None>
+  </ItemGroup>
+</Project>
