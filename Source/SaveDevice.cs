@@ -394,7 +394,7 @@ namespace EasyStorage
 				}
 
 				// catch this one type of exception just to be safe
-				catch (GuideAlreadyVisibleException) { }
+				catch (Exception) { }
 			}
 
 			deviceWasConnected = deviceIsConnected;
