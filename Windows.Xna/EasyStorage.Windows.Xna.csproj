@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{92E7BB8F-4B13-4370-ACA8-D97F22848353}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyStorage.Windows.Xna</RootNamespace>
+    <AssemblyName>EasyStorage.Windows.Xna</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaProfile>HiDef</XnaProfile>
+    <XnaCrossPlatformGroupID>11c0a24f-81fe-49d0-aeb7-07b389bbca1f</XnaCrossPlatformGroupID>
+    <XnaOutputType>Library</XnaOutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>false</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Source\EasyStorageSettings.cs">
+      <Link>EasyStorageSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\FileAction.cs">
+      <Link>FileAction.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\IAsyncSaveDevice.cs">
+      <Link>IAsyncSaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\ISaveDevice.cs">
+      <Link>ISaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\IsolatedStorageSaveDevice.cs">
+      <Link>IsolatedStorageSaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\PlayerSaveDevice.cs">
+      <Link>PlayerSaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevice.cs">
+      <Link>SaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDeviceAsync.cs">
+      <Link>SaveDeviceAsync.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDeviceEventArgs.cs">
+      <Link>SaveDeviceEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevicePromptEventArgs.cs">
+      <Link>SaveDevicePromptEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevicePromptEventResponse.cs">
+      <Link>SaveDevicePromptEventResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevicePromptState.cs">
+      <Link>SaveDevicePromptState.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDeviceSynchronous.cs">
+      <Link>SaveDeviceSynchronous.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveOperationAsyncResult.cs">
+      <Link>SaveOperationAsyncResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SharedSaveDevice.cs">
+      <Link>SharedSaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>
