@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5EFBEB2D-0FA6-4D91-B7E6-70A6E5BCD4E5}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EasyStorage.Android</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AssemblyName>EasyStorage.Android</AssemblyName>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="..\Source\EasyStorageSettings.cs">
+      <Link>EasyStorageSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\FileAction.cs">
+      <Link>FileAction.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\IAsyncSaveDevice.cs">
+      <Link>IAsyncSaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\ISaveDevice.cs">
+      <Link>ISaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\IsolatedStorageSaveDevice.cs">
+      <Link>IsolatedStorageSaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\PlayerSaveDevice.cs">
+      <Link>PlayerSaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevice.cs">
+      <Link>SaveDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDeviceAsync.cs">
+      <Link>SaveDeviceAsync.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDeviceEventArgs.cs">
+      <Link>SaveDeviceEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevicePromptEventArgs.cs">
+      <Link>SaveDevicePromptEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevicePromptEventResponse.cs">
+      <Link>SaveDevicePromptEventResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDevicePromptState.cs">
+      <Link>SaveDevicePromptState.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveDeviceSynchronous.cs">
+      <Link>SaveDeviceSynchronous.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SaveOperationAsyncResult.cs">
+      <Link>SaveOperationAsyncResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SharedSaveDevice.cs">
+      <Link>SharedSaveDevice.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Android.csproj">
+      <Project>{BA9476CF-99BA-4D03-92F2-73D2C5E58883}</Project>
+      <Name>MonoGame.Framework.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
