@@ -7,6 +7,8 @@ namespace EasyStorage
 	// implements the synchronous file operations for the SaveDevice.
 	public abstract partial class SaveDevice
 	{
+		private object _lock = new object();
+
 		/// <summary>
 		/// Helper method to open a StorageContainer.
 		/// </summary>
@@ -39,7 +41,7 @@ namespace EasyStorage
 			VerifyIsReady();
 
 			// lock on the storage device so that only one storage operation can occur at a time
-			lock (storageDevice)
+			lock (_lock)
 			{
 				// open a container
 				using (StorageContainer currentContainer = OpenContainer(containerName))
@@ -64,7 +66,7 @@ namespace EasyStorage
 			VerifyIsReady();
 
 			// lock on the storage device so that only one storage operation can occur at a time
-			lock (storageDevice)
+			lock (_lock)
 			{
 				// open a container
 				using (StorageContainer currentContainer = OpenContainer(containerName))
@@ -88,7 +90,7 @@ namespace EasyStorage
 			VerifyIsReady();
 
 			// lock on the storage device so that only one storage operation can occur at a time
-			lock (storageDevice)
+			lock (_lock)
 			{
 				// open a container
 				using (StorageContainer currentContainer = OpenContainer(containerName))
@@ -113,7 +115,7 @@ namespace EasyStorage
 			VerifyIsReady();
 
 			// lock on the storage device so that only one storage operation can occur at a time
-			lock (storageDevice)
+			lock (_lock)
 			{
 				// open a container
 				using (StorageContainer currentContainer = OpenContainer(containerName))
@@ -144,7 +146,7 @@ namespace EasyStorage
 			VerifyIsReady();
 
 			// lock on the storage device so that only one storage operation can occur at a time
-			lock (storageDevice)
+			lock (_lock)
 			{
 				// open a container
 				using (StorageContainer currentContainer = OpenContainer(containerName))
