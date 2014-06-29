@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.GamerServices;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Storage;
+using System;
+using System.Collections.Generic;
 
 namespace EasyStorage
 {
@@ -442,7 +441,7 @@ namespace EasyStorage
 		private void ForcePromptCallback(IAsyncResult result)
 		{
 			// just end the message and instruct the SaveDevice to show the selector
-			Guide.EndShowMessageBox(result);
+			//Guide.EndShowMessageBox(result);
 			state = SaveDevicePromptState.ShowSelector;
 		}
 
@@ -454,15 +453,15 @@ namespace EasyStorage
 		/// <param name="result">The result of the prompt.</param>
 		private void ReselectPromptCallback(IAsyncResult result)
 		{
-			int? choice = Guide.EndShowMessageBox(result);
+			//int? choice = Guide.EndShowMessageBox(result);
 
-			// get the device if the user chose the first option
-			state = choice.HasValue && choice.Value == 0 ? SaveDevicePromptState.ShowSelector : SaveDevicePromptState.None;
+			//// get the device if the user chose the first option
+			//state = choice.HasValue && choice.Value == 0 ? SaveDevicePromptState.ShowSelector : SaveDevicePromptState.None;
 
-			// fire an event for the game to know the result of the prompt
-			promptEventArgs.ShowDeviceSelector = state == SaveDevicePromptState.ShowSelector;
-			if (DeviceReselectPromptClosed != null)
-				DeviceReselectPromptClosed(this, promptEventArgs);
+			//// fire an event for the game to know the result of the prompt
+			//promptEventArgs.ShowDeviceSelector = state == SaveDevicePromptState.ShowSelector;
+			//if (DeviceReselectPromptClosed != null)
+			//	DeviceReselectPromptClosed(this, promptEventArgs);
 		}
 
 		/// <summary>
@@ -500,14 +499,14 @@ namespace EasyStorage
 		// helper method for showing guide messages
 		private static void ShowMessageBox(PlayerIndex? player, string title, string text, IEnumerable<string> buttons, AsyncCallback callback)
 		{
-			if (player.HasValue)
-			{
-				Guide.BeginShowMessageBox(player.Value, title, text, buttons, 0, MessageBoxIcon.None, callback, null);
-			}
-			else
-			{
-				Guide.BeginShowMessageBox(title, text, buttons, 0, MessageBoxIcon.None, callback, null);
-			}
+			//if (player.HasValue)
+			//{
+			//	Guide.BeginShowMessageBox(player.Value, title, text, buttons, 0, MessageBoxIcon.None, callback, null);
+			//}
+			//else
+			//{
+			//	Guide.BeginShowMessageBox(title, text, buttons, 0, MessageBoxIcon.None, callback, null);
+			//}
 		}
 	}
 }

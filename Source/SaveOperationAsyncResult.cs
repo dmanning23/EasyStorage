@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using Microsoft.Xna.Framework.Storage;
+﻿using Microsoft.Xna.Framework.Storage;
+using System;
 using System.IO;
+using System.Threading;
 
 namespace EasyStorage
 {
